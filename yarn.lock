@@ -2125,12 +2125,12 @@
     "@react-types/shared" "^3.5.0"
 
 "@react-stately/data@^3.3.0":
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/@react-stately/data/-/data-3.3.0.tgz#a39a1100730ad624286cf7fc58ef57494424ecc1"
-  integrity sha512-5T8Gz8wo7rXPKOMGpNxaEaYgcHmnYqTF+1jlv9pjv1ToX77nJHsqhVeAwt8SLscsfZJ6AAhIxUx49iQ6AuNbEA==
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/@react-stately/data/-/data-3.4.0.tgz#c7f4fdca3de1798207f02ad39671b733bee9e5e6"
+  integrity sha512-RIF2zD3xFU3KGd19M6/P8cbPjnGsZFSjodVzPj60zqK8ToiAarMqTMplc++c1KLoR+UMoJx4J489PORc2V0hMg==
   dependencies:
     "@babel/runtime" "^7.6.2"
-    "@react-types/shared" "^3.5.0"
+    "@react-types/shared" "^3.6.0"
 
 "@react-stately/list@^3.2.1", "@react-stately/list@^3.2.2":
   version "3.2.2"
@@ -2272,10 +2272,10 @@
   dependencies:
     "@react-types/shared" "^3.4.0"
 
-"@react-types/shared@^3.2.1", "@react-types/shared@^3.3.0", "@react-types/shared@^3.4.0", "@react-types/shared@^3.5.0":
-  version "3.5.0"
-  resolved "https://registry.yarnpkg.com/@react-types/shared/-/shared-3.5.0.tgz#dbc90e8fe711967e66d6f3ce0e17d34b24bd6283"
-  integrity sha512-997Me7AegwJOI10ye/Q5ds6fT+VBc6XcsXYzPqOD+HIbyL1kUQNDF/VoO37ib7KEH8jXH9aceoX9blz3Q1QcpA==
+"@react-types/shared@^3.2.1", "@react-types/shared@^3.3.0", "@react-types/shared@^3.4.0", "@react-types/shared@^3.5.0", "@react-types/shared@^3.6.0":
+  version "3.7.1"
+  resolved "https://registry.yarnpkg.com/@react-types/shared/-/shared-3.7.1.tgz#6aadddab0c7911a97a97a4c48723eb15a34b5fad"
+  integrity sha512-VNKlqh37UjB3Hd7gb5Hgsum/2x5mhd7vuBBGPEFevhkOMBW8KlqrU75yaKUe3rEFbky7H6+A8Dzoj4r68OS14w==
 
 "@react-types/shared@^3.6.0", "@react-types/shared@^3.7.0":
   version "3.7.1"
