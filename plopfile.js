@@ -42,14 +42,12 @@ module.exports = function (plop) {
       },
       {
         type: "add",
-        path:
-          "src/components/{{properCase name}}/{{properCase name}}.module.css",
+        path: "src/components/{{properCase name}}/{{properCase name}}.module.css",
         templateFile: "plop-templates/component/Component.module.css.hbs",
       },
       {
         type: "add",
-        path:
-          "src/components/{{properCase name}}/{{properCase name}}.stories.mdx",
+        path: "src/components/{{properCase name}}/{{properCase name}}.stories.mdx",
         templateFile: "plop-templates/component/Component.stories.mdx.hbs",
       },
       {
@@ -78,14 +76,12 @@ module.exports = function (plop) {
     actions: [
       {
         type: "add",
-        path:
-          "src/components/{{parent}}/components/{{properCase name}}/{{properCase name}}.js",
+        path: "src/components/{{parent}}/components/{{properCase name}}/{{properCase name}}.js",
         templateFile: "plop-templates/component/Component.js.hbs",
       },
       {
         type: "add",
-        path:
-          "src/components/{{parent}}/components/{{properCase name}}/index.js",
+        path: "src/components/{{parent}}/components/{{properCase name}}/index.js",
         templateFile: "plop-templates/component/index.js.hbs",
       },
       {
