@@ -3665,12 +3665,7 @@
   resolved "https://registry.yarnpkg.com/@types/prettier/-/prettier-1.19.1.tgz#33509849f8e679e4add158959fdb086440e9553f"
   integrity sha512-5qOlnZscTn4xxM5MeGXAMOsIOIKIbh9e85zJWfBRVPlRMEVawzoPhINYbRGkBZCI8LxvBe7tJCdWiarA99OZfQ==
 
-"@types/prettier@^2.0.0":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@types/prettier/-/prettier-2.0.1.tgz#b6e98083f13faa1e5231bfa3bdb1b0feff536b6d"
-  integrity sha512-boy4xPNEtiw6N3abRhBi/e7hNvy3Tt8E9ZRAQrwAGzoCGZS/1wjo9KY7JHhnfnEsG5wSjDbymCozUM9a3ea7OQ==
-
-"@types/prettier@^2.1.5":
+"@types/prettier@^2.0.0", "@types/prettier@^2.1.5":
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/@types/prettier/-/prettier-2.3.2.tgz#fc8c2825e4ed2142473b4a81064e6e081463d1b3"
   integrity sha512-eI5Yrz3Qv4KPUa/nSIAi0h+qX0XyewOliug5F2QAtuRg6Kjg6jfmxe1GIwoIRhZspD1A0RP8ANrPwvEXXtRFog==
@@ -13410,10 +13405,10 @@ pkg-up@^2.0.0:
   dependencies:
     find-up "^2.1.0"
 
-playroom@^0.23.0:
-  version "0.23.0"
-  resolved "https://registry.yarnpkg.com/playroom/-/playroom-0.23.0.tgz#53c13ffc9797d7133a123d97db1a9694b09d6345"
-  integrity sha512-uS1Ry7zmZUpl2+XFAesHiSEz0y9a0BdR+QlTJ7X8GdLixYarwz8BkTsSp7F21wMiwxxm+3pW9Tens4EvIGS0qw==
+playroom@^0.25.0:
+  version "0.25.0"
+  resolved "https://registry.yarnpkg.com/playroom/-/playroom-0.25.0.tgz#0733932ca1b88deae08bb31af426ace20e6b5b40"
+  integrity sha512-cHE9Imc+llsz8qpqIUiuEHuzoRPYsT5o6hDgXvLtlw8dfadtUFNgJmgjxKYliO/l6AOibap0rpFx8JVgZwT4lA==
   dependencies:
     "@babel/cli" "^7.8.3"
     "@babel/core" "^7.8.3"
