@@ -110,7 +110,7 @@
     "stylelint-config-prettier": "^8.0.1",
     "stylelint-config-standard": "^22.0.0",
     "tailwindcss": "^1.9.6",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^4.0.0"
   },
   "dependencies": {
     "@react-aria/button": "^3.3.1",
