@@ -66,6 +66,8 @@ export const Popover = ({ active, children, onClose, triggerRef }) => {
   );
 };
 
+const Element = typeof Element === "undefined" ? function () {} : Element;
+
 Popover.propTypes = {
   /** Whether the overlay is currently open */
   active: PropTypes.bool.isRequired,
