@@ -14,6 +14,8 @@
 
 ### Dependency upgrades
 
+- Upgraded to React 17
+
 ### Code quality
 
 ### Deprecations
