@@ -48,8 +48,6 @@ export const OptionList = ({ state, ...otherProps }) => {
   );
 };
 
-const Element = typeof Element === "undefined" ? function () {} : Element;
-
 OptionList.propTypes = {
   /** The select state obj */
   state: PropTypes.object,
