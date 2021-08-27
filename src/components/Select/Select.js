@@ -30,6 +30,7 @@ function normalizeOption(option) {
  * 4 or more options, to avoid cluttering the interface.
  */
 const Select = ({
+  __FOR_TESTING_ONLY_isOpen,
   disabled,
   error,
   helpText,
@@ -67,6 +68,7 @@ const Select = ({
       .filter((option) => option.disabled)
       .map((option) => option.value),
     isDisabled: disabled,
+    isOpen: __FOR_TESTING_ONLY_isOpen,
     items: options.map(normalizeOption),
     onSelectionChange: handleChange,
     selectedKey: value,
@@ -172,6 +174,11 @@ const Select = ({
 };
 
 Select.propTypes = {
+  /**
+   * Do not use this prop. It is for internal testing only to ensure storybook upgrades
+   * do not break the select
+   */
+  __FOR_TESTING_ONLY_isOpen: PropTypes.bool,
   /** Disable the input */
   disabled: PropTypes.bool,
   /** Error to display beneath the label */

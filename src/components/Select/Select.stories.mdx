@@ -256,3 +256,32 @@ When the viewport cannot contain all menu items, the list presents a scrollable 
     />
   </Story>
 </Preview>
+
+### Select with open state
+
+This is not a real supported use case, but it is useful to ensure that we capture the open
+state of the select. This will be removed when Storybook supports interacting with the
+component programmatically in a story.
+
+<Preview>
+  <Story name="Open state">
+    <Select
+      __FOR_TESTING_ONLY_isOpen={true}
+      label="Month"
+      options={[
+        { label: "January", value: "1" },
+        { label: "February", value: "2" },
+        { label: "March", value: "3" },
+        { label: "April", value: "4" },
+        { label: "May", value: "5" },
+        { label: "June", value: "6" },
+        { label: "July", value: "7" },
+        { label: "August", value: "8" },
+        { label: "September", value: "9" },
+        { label: "October", value: "10" },
+        { label: "November", value: "11" },
+        { label: "December", value: "12" },
+      ]}
+    />
+  </Story>
+</Preview>
