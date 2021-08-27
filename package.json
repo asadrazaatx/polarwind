@@ -42,7 +42,7 @@
     "polarwind.css"
   ],
   "peerDependencies": {
-    "react": "^16.13.1 || ^17.0.2"
+    "react": "^16.14.0 || ^17.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
@@ -67,7 +67,6 @@
     "babel-loader": "^8.1.0",
     "babel-plugin-add-react-displayname": "^0.0.5",
     "babel-plugin-react-docgen": "^4.1.0",
-    "babel-plugin-react-require": "^3.1.3",
     "change-case": "^4.1.1",
     "color": "^3.1.2",
     "dedent": "^0.7.0",

@@ -1,4 +1,3 @@
-import React from "react";
 import "@envoy/polarwind/polarwind.css";
 import {
   AppProvider,

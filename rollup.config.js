@@ -25,7 +25,11 @@ module.exports = [
     plugins: [
       nodeResolve(),
       babel({ babelHelpers: "bundled" }),
-      commonjs(),
+      commonjs({
+        namedExports: {
+          "react/jsx-runtime": ["jsx", "jsxs", "Fragment"],
+        },
+      }),
       postcss({
         modules: {
           generateScopedName: generateScopedName({

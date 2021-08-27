@@ -15,6 +15,7 @@ module.exports = {
     "plugin:import/warnings",
     "plugin:jest/recommended",
     "plugin:jest/style",
+    "plugin:react/jsx-runtime",
   ],
   globals: {
     Atomics: "readonly",
@@ -78,14 +79,12 @@ module.exports = {
     ],
 
     "object-shorthand": ["error", "always"],
-    // we use babel-plugin-react-require which injects the import React anyway
     "react/jsx-sort-props": [
       "error",
       {
         callbacksLast: true,
       },
     ],
-    "react/react-in-jsx-scope": "off",
     "sort-destructure-keys/sort-destructure-keys": [2, { caseSensitive: true }],
     "sort-imports": [
       "error",

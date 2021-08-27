@@ -1,6 +1,6 @@
 import classNames from "classnames/bind";
 import PropTypes from "prop-types";
-import React from "react";
+import { forwardRef } from "react";
 import { UnstyledLink } from "../UnstyledLink/UnstyledLink";
 import styles from "./Button.module.css";
 
@@ -9,7 +9,7 @@ const cx = classNames.bind(styles);
 /**
  * Buttons are used primarily for actions, such as "Add", "Close", "Cancel", or "Save".
  */
-const Button = React.forwardRef(function Button(
+const Button = forwardRef(function Button(
   {
     brandOutline,
     children,

@@ -1,4 +1,4 @@
-import React from "react";
+import { createElement, StrictMode } from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
@@ -22,10 +22,10 @@ window.props = window.props || { env: "Create-React-App" };
 window.reactRoot = window.reactRoot || document.getElementById("root");
 
 ReactDOM.render(
-  React.createElement(
-    React.StrictMode,
+  createElement(
+    StrictMode,
     null,
-    React.createElement(pages[window.component], window.props)
+    createElement(pages[window.component], window.props)
   ),
   window.reactRoot
 );

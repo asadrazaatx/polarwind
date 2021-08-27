@@ -1,8 +1,10 @@
 {
   "ignore": ["node_modules/**"],
-  "presets": ["@babel/env", "@babel/preset-react"],
+  "presets": [
+    "@babel/env",
+    ["@babel/preset-react", { "runtime": "automatic" }]
+  ],
   "plugins": [
-    "react-require",
     "add-react-displayname",
     "@babel/plugin-proposal-optional-chaining"
   ],
