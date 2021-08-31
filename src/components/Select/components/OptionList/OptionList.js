@@ -54,7 +54,7 @@ OptionList.propTypes = {
   /** The ref of the activator button */
   triggerRef: PropTypes.oneOfType([
     PropTypes.func,
-    PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
+    PropTypes.shape({ current: PropTypes.element }),
   ]),
 };
 

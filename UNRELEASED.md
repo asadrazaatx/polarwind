@@ -10,6 +10,8 @@
 
 ### Bug fixes
 
+- Use `PropTypes.element` instead of `Element` ([#428](https://github.com/envoy/polarwind/pull/428))
+
 ### Documentation
 
 ### Development workflow
