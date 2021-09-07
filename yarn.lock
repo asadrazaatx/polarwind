@@ -1425,9 +1425,9 @@
   integrity sha512-6U71C2Wp7r5XtFtQzYrW5iKFT67OixrSxjI4MptCHzdSVlgabczzqLe0ZSgnub/5Kp4hSbpDB1tMytZY9pwxxA==
 
 "@envoy/tailwind@^1.1.0":
-  version "1.1.0"
-  resolved "https://npm.pkg.github.com/download/@envoy/tailwind/1.1.0/c97f35558f244a2314e00bdc1aebf119b0023ee637f756df03db66277e464d64#3df2478b19c48537ba69ca2ae256ae71d982d21c"
-  integrity sha512-t0alrYm/fqIJZpjoQ0mkEQR9HfgxfYQ3rHqTeK4X4N4wKHTlHhK4YfmYIz8xqL+NVWZzKFgAh18TNEs0/ym0fg==
+  version "1.2.0"
+  resolved "https://npm.pkg.github.com/download/@envoy/tailwind/1.2.0/4fae8afb8277f614f8ff37308ee0a6e7e0b5fe80203d37d4c572045c4e641e0c#768955c889c8b818af288937e0e19a53c3a5e55c"
+  integrity sha512-kB9+4CoMIEdJ1cd1rT1tWfqXwXjXxBkb2UTUIaTo7L51wdBkd5Ckpa/Mx63qfXd6MsRy3Y2rr3ePfU89G6/gZg==
   dependencies:
     "@tailwindcss/custom-forms" "^0.2.1"
     hex-rgb "^4.3.0"
