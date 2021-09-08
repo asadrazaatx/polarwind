@@ -14,6 +14,8 @@
 
 ### Documentation
 
+- Add Next.js Sample app ([#443](https://github.com/envoy/polarwind/pull/443))
+
 ### Development workflow
 
 ### Dependency upgrades
