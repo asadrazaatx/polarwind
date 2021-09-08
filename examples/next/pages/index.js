@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Page, Tabs } from '@envoy/polarwind'
 
 export default function Home() {
   const [selected, setSelected] = useState(0)
@@ -19,7 +20,9 @@ export default function Home() {
   ]
 
   return (
-    <Page>
+    <Page
+      title="Example Next.js app"
+    >
       <Tabs
         tabs={tabs}
         selected={selected}
