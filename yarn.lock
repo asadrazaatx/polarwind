@@ -3763,13 +3763,6 @@
   resolved "https://registry.yarnpkg.com/@types/braces/-/braces-3.0.0.tgz#7da1c0d44ff1c7eb660a36ec078ea61ba7eb42cb"
   integrity sha512-TbH79tcyi9FHwbyboOKeRachRq63mSuWYXOflsNO9ZyE5ClQ/JaozNKl+aWUq87qPNsXasXxi2AbgfwIJ+8GQw==
 
-"@types/classnames@^2.2.11":
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/@types/classnames/-/classnames-2.3.1.tgz#3c2467aa0f1a93f1f021e3b9bcf938bd5dfdc0dd"
-  integrity sha512-zeOWb0JGBoVmlQoznvqXbE0tEC/HONsnoUNH19Hc96NFsTAwTXbTqb8FMYkru1F/iqp7a18Ws3nWJvtA1sHD1A==
-  dependencies:
-    classnames "*"
-
 "@types/codemirror@^0.0.108":
   version "0.0.108"
   resolved "https://registry.yarnpkg.com/@types/codemirror/-/codemirror-0.0.108.tgz#e640422b666bf49251b384c390cdeb2362585bde"
@@ -6091,7 +6084,7 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
-classnames@*, classnames@^2.2.5, classnames@^2.2.6:
+classnames@^2.2.5, classnames@^2.2.6, classnames@^2.3.1:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.3.1.tgz#dfcfa3891e306ec1dad105d0e88f4417b8535e8e"
   integrity sha512-OlQdbZ7gLfGarSqxesMesDa5uz7KFbID8Kpq/SxIoNGDqY8lSYs0D+hhtBXhcdB3rcbXArFr7vlHheLk1voeNA==
@@ -14197,9 +14190,9 @@ pkg-up@^2.0.0:
     find-up "^2.1.0"
 
 playroom@^0.27.0:
-  version "0.27.2"
-  resolved "https://registry.yarnpkg.com/playroom/-/playroom-0.27.2.tgz#c5d01d033ace918c007ce85912340b0366ebccc6"
-  integrity sha512-OFkiBlIvQwTfUkD3SWrC2pvdDMHeneBoSbnn15sKI3doPy6HfOLnes16QzEe3r69n8MYPvQVKqj1t7ftP/+v/A==
+  version "0.27.4"
+  resolved "https://registry.yarnpkg.com/playroom/-/playroom-0.27.4.tgz#9abcc427da6eb07b9971ed2b9150a2fd21e0b281"
+  integrity sha512-GnWDTqdxuzVQr7CpkwvHSeRQCOP5iIkl1S2MSjWu6IlygJHo+P99+R2J1YAHhPvIhL0p2eVDqZuntSYzPOEvxA==
   dependencies:
     "@babel/cli" "^7.13.10"
     "@babel/core" "^7.13.10"
@@ -14208,7 +14201,6 @@ playroom@^0.27.0:
     "@babel/preset-typescript" "^7.13.0"
     "@babel/standalone" "^7.13.11"
     "@types/base64-url" "^2.2.0"
-    "@types/classnames" "^2.2.11"
     "@types/codemirror" "^0.0.108"
     "@types/dedent" "^0.7.0"
     "@types/history" "^4.7.8"
@@ -14219,7 +14211,7 @@ playroom@^0.27.0:
     "@types/react-dom" "^17.0.2"
     autoprefixer "^10.2.5"
     babel-loader "^8.2.2"
-    classnames "^2.2.6"
+    classnames "^2.3.1"
     codemirror "^5.59.4"
     command-line-args "^5.1.1"
     command-line-usage "^6.1.1"
