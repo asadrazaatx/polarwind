@@ -2027,29 +2027,18 @@
     react-lifecycles-compat "^3.0.4"
 
 "@react-aria/button@^3.3.1":
-  version "3.3.3"
-  resolved "https://registry.yarnpkg.com/@react-aria/button/-/button-3.3.3.tgz#627056a0664f8aa46f10b5a0e53c3a31721269a5"
-  integrity sha512-kpgy2GZT8IAE8o3zhC2nlhsk2fFnkYMBfo3t8gg4H+QGy0vF2/HONKQ7CwgoIm9Huj7Lz4Va0cdApMnMinH7YQ==
+  version "3.3.4"
+  resolved "https://registry.yarnpkg.com/@react-aria/button/-/button-3.3.4.tgz#3af6eb4e0a479a76ba7386d541051d1273cd68fa"
+  integrity sha512-vebTcf9YpwaKCvsca2VWhn6eYPa15OJtMENwaGop72UrL35Oa7xDgU0RG22RAjRjt8HRVlAfLpHkJQW6GBGU3g==
   dependencies:
     "@babel/runtime" "^7.6.2"
-    "@react-aria/focus" "^3.4.1"
-    "@react-aria/interactions" "^3.5.1"
-    "@react-aria/utils" "^3.8.2"
+    "@react-aria/focus" "^3.5.0"
+    "@react-aria/interactions" "^3.6.0"
+    "@react-aria/utils" "^3.9.0"
     "@react-stately/toggle" "^3.2.3"
     "@react-types/button" "^3.4.1"
 
-"@react-aria/focus@^3.4.1":
-  version "3.4.1"
-  resolved "https://registry.yarnpkg.com/@react-aria/focus/-/focus-3.4.1.tgz#76fc29e8f1b57b9c87240c9762d7fce7352c61eb"
-  integrity sha512-juM44NCkTvVq+yOVTPADSKJpwKjiqR2Y65W8WTkL5QjaEjYrhph3fdV/ie2jsA7/UszSvMEqJyFcbaHbvDSznA==
-  dependencies:
-    "@babel/runtime" "^7.6.2"
-    "@react-aria/interactions" "^3.5.1"
-    "@react-aria/utils" "^3.8.2"
-    "@react-types/shared" "^3.8.0"
-    clsx "^1.1.1"
-
-"@react-aria/focus@^3.5.0":
+"@react-aria/focus@^3.4.1", "@react-aria/focus@^3.5.0":
   version "3.5.0"
   resolved "https://registry.yarnpkg.com/@react-aria/focus/-/focus-3.5.0.tgz#02b85f97d6114af1eccc0902ce40723b626cb7f9"
   integrity sha512-Eib75Q6QgQdn8VVVByg5Vipaaj/C//8Bs++sQY7nkomRx4sdArOnXbDppul3YHP6mRfU9VRLvAigEUlReQF/Xw==
