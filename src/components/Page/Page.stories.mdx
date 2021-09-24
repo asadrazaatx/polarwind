@@ -21,7 +21,7 @@ import { Page } from "./Page";
 
 <Meta
   component={Page}
-  decorators={[withSmartKnobs({ ignoreProps: ["children", "titleAction"] })]}
+  decorators={[withSmartKnobs({ ignoreProps: ["children", "titleAction", "title", "tabs"] })]}
   title="Components / Structure / Page"
 />
 
@@ -101,6 +101,45 @@ Use when exposing additional components on the right of the page title.
         </Stack>
       }
     />
+  </Story>
+</Preview>
+
+### Page with custom title
+
+Pass in a custom title component.
+
+<Preview>
+  <Story name="Page with custom title">
+      <Page
+        breadcrumbs={
+          [
+            {
+              content: "Home",
+              url: window.location.origin
+            }
+          ]
+        }
+        title={
+          <Stack>
+            <img
+              src="https://envoy.com/images/icons/products/desks-app.png"
+              alt="Envoy desks"
+              height={60}
+              width={60}
+            />
+            <Stack
+              distribution="center"
+              vertical
+            >
+              <Stack>
+                <Heading>Desks</Heading>
+                <Heading secondary>by Envoy</Heading>
+              </Stack>
+              <Heading secondary>Easy desk booking for the hybrid workplace</Heading>
+            </Stack>
+          </Stack>
+        }
+      />
   </Story>
 </Preview>
 
