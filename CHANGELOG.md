@@ -8,6 +8,17 @@ The format is based on [these versioning and changelog guidelines](https://git.i
 
 ---
 
+## 2.0.0 - 2021-10-01
+
+### Breaking changes
+
+- Drop support for IE11
+
+### Dependency upgrades
+
+- Upgraded Tailwind to 2.2.16
+- Upgraded @envoy/tailwind to 2.0.0
+
 ## 1.10.0 - 2021-09-09
 
 ### Enhancements
