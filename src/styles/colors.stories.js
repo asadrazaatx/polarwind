@@ -20,14 +20,18 @@ function Color({ color, hex }) {
     "justify-between",
     "flex",
     "w-1/3",
-    `bg-${color}`,
     {
       "text-carbon-70": ColorCheck(hex).isLight(),
       "text-white": ColorCheck(hex).isDark(),
     }
   );
+  // eslint-disable-next-line react/prop-types
+  const [colorName, colorScale] = color.split("-");
   return (
-    <div className={className}>
+    <div
+      className={className}
+      style={{ backgroundColor: colors[colorName][colorScale] }}
+    >
       <span>{color}</span>
       <span>{hex}</span>
     </div>

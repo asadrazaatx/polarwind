@@ -1,13 +1,6 @@
-const assert = require("assert");
 const _ = require("lodash");
 
-module.exports = function ({
-  ascender,
-  capitalHeight,
-  descender,
-  emSquare,
-  infix,
-}) {
+module.exports = function ({ ascender, capitalHeight, descender, emSquare }) {
   // convert metric to relative emSquare
   function remsq(metric) {
     return (Math.abs(metric) / emSquare).toPrecision(2);
@@ -40,20 +33,12 @@ module.exports = function ({
     });
   }
 
-  return function ({ addUtilities, config, e, theme, variants }) {
+  return function ({ addUtilities, e, theme, variants }) {
     const capHeights = capitalHeights(theme("fontSize"));
 
     const fontSizes = _.fromPairs(
       _.map(capHeights, ([modifier, capHeight]) => {
-        let selector;
-
-        if (config("corePlugins").indexOf("fontSize") < 0) {
-          selector = ["text", modifier];
-        } else {
-          assert(infix, "infix required if fontSize corePlugin is enabled");
-          selector = ["text", infix, modifier];
-        }
-
+        const selector = ["text", modifier];
         return [
           "." + e(selector.join("-")),
           {
@@ -68,15 +53,7 @@ module.exports = function ({
     const lineHeights = _.fromPairs(
       _.flatMap(theme("lineHeight"), (value, modifier) => {
         return _.map(capHeights, ([fontSizeModifier, capHeight]) => {
-          let selector;
-
-          if (config("corePlugins").indexOf("lineHeight") < 0) {
-            selector = ["leading", fontSizeModifier, modifier];
-          } else {
-            assert(infix, "infix required if lineHeight corePlugin is enabled");
-            selector = ["leading", infix, fontSizeModifier, modifier];
-          }
-
+          const selector = ["leading", fontSizeModifier, modifier];
           return [
             "." + e(selector.join("-")),
             {
@@ -90,8 +67,9 @@ module.exports = function ({
 
     const verticalAligns = _.fromPairs(
       _.map(capHeights, ([modifier, capHeight]) => {
+        const selector = ["align", modifier];
         return [
-          `.align-${e(modifier)}`,
+          "." + e(selector.join("-")),
           {
             "vertical-align": `-${valign(capHeight)}px`,
           },
@@ -102,8 +80,9 @@ module.exports = function ({
 
     const heights = _.fromPairs(
       _.map(capHeights, ([modifier, capHeight]) => {
+        const selector = ["h", modifier];
         return [
-          `.h-${e(modifier)}`,
+          "." + e(selector.join("-")),
           {
             height: capHeight + "px",
           },
@@ -114,8 +93,9 @@ module.exports = function ({
 
     const widths = _.fromPairs(
       _.map(capHeights, ([modifier, capHeight]) => {
+        const selector = ["w", modifier];
         return [
-          `.w-${e(modifier)}`,
+          "." + e(selector.join("-")),
           {
             width: capHeight + "px",
           },

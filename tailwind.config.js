@@ -7,12 +7,13 @@ function rgba(hex, alpha) {
 
 module.exports = {
   presets: [require("@envoy/tailwind")],
+  mode: "jit",
   theme: {
     // it's hard to extend boxShadow since it needs the complete string including color,
     // which is why the best place to define it is by overriding the entire boxShadow
     // theme
     boxShadow: (theme) => ({
-      default: "0px 1px 2px rgba(0, 0, 0, 0.08)",
+      DEFAULT: "0px 1px 2px rgba(0, 0, 0, 0.08)",
       none: "none",
       medium: "0px 2px 4px rgba(0, 0, 0, 0.08)",
       large: "0px 4px 8px rgba(0, 0, 0, 0.12)",
@@ -47,14 +48,9 @@ module.exports = {
       spacing: {
         2.5: "0.604rem",
         2.75: "0.6666rem",
+        15: "3.75rem",
       },
     },
-  },
-  variants: {
-    borderRadius: ({ after }) => after(["first", "last"]),
-    borderWidth: ({ after }) => after(["hover"]),
-    margin: ({ after }) => after(["first"]),
-    textColor: ({ after }) => after(["active"]),
   },
   plugins: [
     require("./src/plugins/fontMetrics")({
@@ -75,19 +71,6 @@ module.exports = {
     divideOpacity: false,
   },
   purge: {
-    mode: "layers",
     content: ["./src/**/*.js"],
-    options: {
-      ...(process.env.STORYBOOK && {
-        whitelistPatterns: [/^bg-/], // preserve bg- utilities for colors.stories.js
-      }),
-    },
-  },
-  future: {
-    removeDeprecatedGapUtilities: true,
-  },
-  experimental: {
-    applyComplexClasses: true,
-    extendedSpacingScale: true,
   },
 };

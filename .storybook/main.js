@@ -13,42 +13,31 @@ module.exports = {
     "@storybook/addon-a11y",
     "storybook-addon-playroom",
     "@storybook/addon-knobs",
+    {
+      name: "@storybook/addon-postcss",
+      options: {
+        cssLoaderOptions: {
+          modules: {
+            getLocalIdent: (context, _localIdentName, localName) => {
+              return getLocalIdent(localName, context.resourcePath);
+            },
+          },
+          importLoaders: 1,
+        },
+      },
+    },
   ],
   webpackFinal: (config) => {
-    // Remove the existing css rule
-    config.module.rules = config.module.rules.filter(
-      (f) => f.test.toString() !== "/\\.css$/"
-    );
-
     config.module.rules = config.module.rules.map((data) => {
       if (/svg\|/.test(String(data.test)))
-        data.test = /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|cur|ani)(\?.*)?$/;
+        data.test =
+          /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|cur|ani)(\?.*)?$/;
       return data;
     });
 
     config.module.rules.push({
       test: /\.svg$/,
       use: ["url-loader"],
-    });
-
-    config.module.rules.push({
-      test: /\.css$/,
-      use: [
-        "style-loader",
-        {
-          loader: "css-loader",
-          options: {
-            modules: {
-              getLocalIdent: (context, _localIdentName, localName) => {
-                return getLocalIdent(localName, context.resourcePath);
-              },
-            },
-            importLoaders: 1,
-          },
-        },
-        "postcss-loader",
-      ],
-      include: path.resolve(__dirname, "../"),
     });
 
     config.module.rules[0].use[0].options.plugins = [

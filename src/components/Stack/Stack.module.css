@@ -99,5 +99,5 @@
 }
 
 .noWrap {
-  @apply flex-no-wrap;
+  @apply flex-nowrap;
 }
