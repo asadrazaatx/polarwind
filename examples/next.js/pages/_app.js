@@ -1,7 +1,10 @@
-import '../styles/globals.css'
+import "@envoy/polarwind/polarwind.css";
+import { AppProvider } from "@envoy/polarwind";
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+export default function MyApp({ Component, pageProps }) {
+  return (
+    <AppProvider>
+      <Component {...pageProps} />
+    </AppProvider>
+  );
 }
-
-export default MyApp
