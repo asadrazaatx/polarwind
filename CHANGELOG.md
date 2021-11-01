@@ -8,6 +8,10 @@ The format is based on [these versioning and changelog guidelines](https://git.i
 
 ---
 
+## 2.0.1 - 2021-11-01
+
+- Bumped devDependencies
+
 ## 2.0.0 - 2021-10-01
 
 ### Breaking changes
