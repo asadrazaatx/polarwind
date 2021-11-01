@@ -4,6 +4,7 @@ module.exports = {
     "stylelint-config-css-modules",
     "stylelint-config-prettier",
   ],
+  ignoreFiles: ["**/*.mdx", "**/*.svg"],
   rules: {
     "at-rule-no-unknown": [
       true,
@@ -17,5 +18,6 @@ module.exports = {
         ignoreAtRules: ["apply"],
       },
     ],
+    "selector-class-pattern": "^[a-zA-Z][a-zA-Z0-9-]+$",
   },
 };
