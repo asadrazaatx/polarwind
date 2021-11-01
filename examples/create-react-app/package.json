@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@envoy/express-envoy-auth": "^1.0.2",
-    "@envoy/polarwind": "^1.10.0",
+    "@envoy/express-envoy-auth": "^1.0.4",
+    "@envoy/polarwind": "^2.0.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
@@ -12,9 +12,9 @@
     "express-session": "^1.17.1",
     "http-proxy-middleware": "^1.0.3",
     "npm-run-all": "^4.1.5",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3"
   },
   "scripts": {
     "start": "react-scripts start",
