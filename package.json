@@ -108,7 +108,7 @@
     "storybook-addon-smart-knobs": "^6.0.2",
     "stylelint": "^13.3.3",
     "stylelint-config-css-modules": "^2.2.0",
-    "stylelint-config-prettier": "^8.0.1",
+    "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-standard": "^22.0.0",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "webpack-dev-server": "^4.0.0"
