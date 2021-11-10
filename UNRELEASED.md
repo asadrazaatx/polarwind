@@ -6,6 +6,9 @@
 
 ### Enhancements
 
+- Add `SSRProvider` in the `AppProvider` stack to enable stable ID generation in server-
+  and client-side renders
+
 ### Bug fixes
 
 ### Documentation
