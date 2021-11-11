@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import { forwardRef, useCallback, useContext } from "react";
 import { EmbeddedContext } from "../../utils/embedded";
 import { OriginContext } from "../../utils/origin";
+import { OwnHostContext } from "../../utils/own-host";
 import { useParent } from "../../utils/parent";
 
 function isAbsoluteUrlFor(url, host) {
@@ -12,8 +13,8 @@ function isAbsolutePath(url) {
   return url.startsWith("/");
 }
 
-function isOwnUrl(url) {
-  return isAbsolutePath(url) || isAbsoluteUrlFor(url, window.location);
+function isOwnUrl(url, ownHost) {
+  return isAbsolutePath(url) || isAbsoluteUrlFor(url, ownHost);
 }
 
 /**
@@ -27,12 +28,13 @@ const UnstyledLink = forwardRef(function UnstyledLink(
 ) {
   const origin = useContext(OriginContext);
   const embedded = useContext(EmbeddedContext);
+  const ownHost = useContext(OwnHostContext);
   const { sendMessage } = useParent();
 
   const isHostUrl = isAbsoluteUrlFor(url, origin);
-  const isThirdPartyUrl = !isOwnUrl(url) && !isHostUrl;
+  const isThirdPartyUrl = !isOwnUrl(url, ownHost) && !isHostUrl;
   // popup when explicitly set. if it's not set, popup when it's a third party url in
-  // embedded mode. but if download it set, ignore all of that.
+  // embedded mode. but if download is set, ignore all of that.
   const shouldPopup = download
     ? false
     : external ?? (embedded && isThirdPartyUrl);
