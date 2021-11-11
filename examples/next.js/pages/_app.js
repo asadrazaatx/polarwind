@@ -3,7 +3,7 @@ import { AppProvider } from "@envoy/polarwind";
 
 export default function MyApp({ Component, pageProps }) {
   return (
-    <AppProvider>
+    <AppProvider ownHost="http://localhost:3000">
       <Component {...pageProps} />
     </AppProvider>
   );

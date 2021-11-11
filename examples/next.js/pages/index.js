@@ -23,7 +23,7 @@ const links = [
     title: "Dashboard route that doesn't exist",
   },
   {
-    url: "https://plugin-home.ngrok.io/about",
+    url: "http://localhost:3000/about",
     title: "Internal link absolute URL",
   },
   {
