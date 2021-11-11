@@ -4,13 +4,13 @@ import {
   Card,
   FormLayout,
   Heading,
+  Link,
   Page,
   Select,
   Stack,
   TextField,
   TextStyle,
 } from "@envoy/polarwind";
-import { Link } from "../components/Link";
 
 const links = [
   { url: "https://dashboard.envoy.com/entries", title: "Dashboard route" },
