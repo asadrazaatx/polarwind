@@ -8,6 +8,20 @@ The format is based on [these versioning and changelog guidelines](https://git.i
 
 ---
 
+## 2.1.0 - 2021-11-11
+
+### Enhancements
+
+- Add `SSRProvider` in the `AppProvider` stack to enable stable ID generation in server-
+  and client-side renders
+
+### Bug fixes
+
+- Fixed `UnstyledLink` throwing an exception when `window` is not available in server-side
+  rendering contexts. Polarwind now provides a mechanism to resolve its own host via the
+  `ownHost` prop on `AppProvider`. This is used when deciding if an absolute URL should
+  open as a popup.
+
 ## 2.0.1 - 2021-11-01
 
 ### Dependency upgrades
