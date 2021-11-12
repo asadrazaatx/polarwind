@@ -8,6 +8,13 @@ The format is based on [these versioning and changelog guidelines](https://git.i
 
 ---
 
+## 2.2.0 - 2021-11-12
+
+### Enhancements
+
+- Add a `href` prop to `Link` and `Button` that aliases to the `url` prop for easier integration when nested under a `next/link`
+- Add support for forwarding refs in `Link`, `Linkable` (internal) and `UnstyledLink` (internal) for easier integration when nested under a `next/link`
+
 ## 2.1.0 - 2021-11-11
 
 ### Enhancements
