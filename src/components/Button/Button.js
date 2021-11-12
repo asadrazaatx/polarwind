@@ -16,6 +16,7 @@ const Button = forwardRef(function Button(
     className,
     disabled,
     download,
+    href,
     icon,
     onClick,
     outline,
@@ -53,6 +54,8 @@ const Button = forwardRef(function Button(
     size != "medium" && size,
     className
   );
+
+  url = url ?? href;
 
   return url ? (
     disabled ? (
@@ -99,6 +102,8 @@ Button.propTypes = {
   disabled: PropTypes.bool,
   /** Instructs the browser to download the file */
   download: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
+  /** Alias for url */
+  href: PropTypes.string,
   /** Icon to display to the left of the button content */
   icon: PropTypes.func,
   /** Callback when clicked */

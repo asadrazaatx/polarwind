@@ -28,3 +28,17 @@ test("supports the download prop", () => {
   );
   expect(screen.getByRole("link")).toHaveAttribute("download");
 });
+
+test("aliases href prop to url", () => {
+  render(<Link href="/">Home</Link>);
+  expect(screen.getByRole("link")).toHaveAttribute("href", "/");
+});
+
+test("url wins when both href and url are defined", () => {
+  render(
+    <Link href="/loser" url="/winner">
+      Home
+    </Link>
+  );
+  expect(screen.getByRole("link")).toHaveAttribute("href", "/winner");
+});

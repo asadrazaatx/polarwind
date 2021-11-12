@@ -14,7 +14,16 @@ const cx = classnames.bind(styles);
  */
 const Link = forwardRef(
   (
-    { children, download, external, monochrome, onClick, underlined, url },
+    {
+      children,
+      download,
+      external,
+      href,
+      monochrome,
+      onClick,
+      underlined,
+      url,
+    },
     ref
   ) => {
     const handleClick = (e) => {
@@ -33,7 +42,7 @@ const Link = forwardRef(
         download={download}
         external={external}
         ref={ref}
-        url={url}
+        url={url ?? href}
         onClick={handleClick}
       >
         {children}
@@ -51,6 +60,8 @@ Link.propTypes = {
   download: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
   /** Makes the link open in a new tab */
   external: PropTypes.bool,
+  /** Alias for url */
+  href: PropTypes.string,
   /** Makes the link color the same as the current text color and adds an underline */
   monochrome: PropTypes.bool,
   /** Callback when a link is clicked */
