@@ -1,6 +1,7 @@
 import classnames from "classnames/bind";
 import PropTypes from "prop-types";
-import { Linkable } from "../Linkable/Linkable";
+import { forwardRef } from "react";
+import { Linkable } from "../Linkable";
 import styles from "./Link.module.css";
 
 const cx = classnames.bind(styles);
@@ -11,37 +12,37 @@ const cx = classnames.bind(styles);
  *
  * For actions that aren't related to navigation, use the button component.
  */
-export const Link = ({
-  children,
-  download,
-  external,
-  monochrome,
-  onClick,
-  underlined,
-  url,
-}) => {
-  const handleClick = () => {
-    onClick && onClick();
-  };
+const Link = forwardRef(
+  (
+    { children, download, external, monochrome, onClick, underlined, url },
+    ref
+  ) => {
+    const handleClick = (e) => {
+      onClick && onClick(e);
+    };
 
-  const className = cx({
-    Link: true,
-    monochrome,
-    underlined: underlined ?? monochrome,
-  });
+    const className = cx({
+      Link: true,
+      monochrome,
+      underlined: underlined ?? monochrome,
+    });
 
-  return (
-    <Linkable
-      className={className}
-      download={download}
-      external={external}
-      url={url}
-      onClick={handleClick}
-    >
-      {children}
-    </Linkable>
-  );
-};
+    return (
+      <Linkable
+        className={className}
+        download={download}
+        external={external}
+        ref={ref}
+        url={url}
+        onClick={handleClick}
+      >
+        {children}
+      </Linkable>
+    );
+  }
+);
+
+Link.displayName = "Link";
 
 Link.propTypes = {
   /** The content to display inside the link */
@@ -59,3 +60,5 @@ Link.propTypes = {
   /** The url to link to */
   url: PropTypes.string,
 };
+
+export { Link };

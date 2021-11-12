@@ -42,7 +42,7 @@ const UnstyledLink = forwardRef(function UnstyledLink(
 
   const handleClick = useCallback(
     (e) => {
-      onClick && onClick();
+      onClick && onClick(e);
       if (shouldSendMessage) {
         e.preventDefault();
         sendMessage({
