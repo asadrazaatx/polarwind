@@ -1,4 +1,4 @@
-import { Link } from "../components/adapters";
+import { Link } from "@envoy/polarwind";
 import NextLink from "next/link";
 
 export default function About() {

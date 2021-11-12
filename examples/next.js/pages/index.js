@@ -1,8 +1,10 @@
 import {
+  Button,
   ButtonGroup,
   Card,
   FormLayout,
   Heading,
+  Link,
   Page,
   Select,
   Stack,
@@ -10,7 +12,6 @@ import {
   TextStyle,
 } from "@envoy/polarwind";
 import NextLink from "next/link";
-import { Button, Link } from "../components/adapters";
 import { Fragment } from "react";
 
 const links = [
@@ -60,23 +61,6 @@ function App() {
           </ButtonGroup>
           <Button plain>Cancel</Button>
         </Stack>
-        <Card>
-          <Stack vertical>
-            <Heading>Link test</Heading>
-            <dl style={{ display: "flex", flexWrap: "wrap" }}>
-              {links.map(({ url, title }) => (
-                <Fragment key={url}>
-                  <dt style={{ width: "50%" }}>
-                    <Link url={url}>{title}</Link>
-                  </dt>
-                  <dd style={{ width: "50%" }}>
-                    <TextStyle variation="subdued">{url}</TextStyle>
-                  </dd>
-                </Fragment>
-              ))}
-            </dl>
-          </Stack>
-        </Card>
         <Card>
           <Stack vertical>
             <Heading>next/link with Link test</Heading>
