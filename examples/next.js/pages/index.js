@@ -1,16 +1,17 @@
 import {
   ButtonGroup,
-  Button,
   Card,
   FormLayout,
   Heading,
-  Link,
   Page,
   Select,
   Stack,
   TextField,
   TextStyle,
 } from "@envoy/polarwind";
+import NextLink from "next/link";
+import { Button, Link } from "../components/adapters";
+import { Fragment } from "react";
 
 const links = [
   { url: "https://dashboard.envoy.com/entries", title: "Dashboard route" },
@@ -62,26 +63,70 @@ function App() {
         <Card>
           <Stack vertical>
             <Heading>Link test</Heading>
-            <Stack distribution="fillEvenly">
-              <Stack>
-                <ul>
-                  {links.map(({ url, title }) => (
-                    <li key={url}>
-                      <Link url={url}>{title}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </Stack>
-              <Stack>
-                <ul>
-                  {links.map(({ url, title }) => (
-                    <li key={url}>
-                      <TextStyle variation="subdued">{url}</TextStyle>
-                    </li>
-                  ))}
-                </ul>
-              </Stack>
-            </Stack>
+            <dl style={{ display: "flex", flexWrap: "wrap" }}>
+              {links.map(({ url, title }) => (
+                <Fragment key={url}>
+                  <dt style={{ width: "50%" }}>
+                    <Link url={url}>{title}</Link>
+                  </dt>
+                  <dd style={{ width: "50%" }}>
+                    <TextStyle variation="subdued">{url}</TextStyle>
+                  </dd>
+                </Fragment>
+              ))}
+            </dl>
+          </Stack>
+        </Card>
+        <Card>
+          <Stack vertical>
+            <Heading>next/link with Link test</Heading>
+            <dl style={{ display: "flex", flexWrap: "wrap" }}>
+              {links.map(({ url, title }) => (
+                <Fragment key={url}>
+                  <dt style={{ width: "50%" }}>
+                    <NextLink href={url} passHref>
+                      <Link>{title}</Link>
+                    </NextLink>
+                  </dt>
+                  <dd style={{ width: "50%" }}>
+                    <TextStyle variation="subdued">{url}</TextStyle>
+                  </dd>
+                </Fragment>
+              ))}
+              <dt style={{ width: "50%" }}>
+                <NextLink
+                  href={{
+                    pathname: "/blog/[slug]",
+                    query: { slug: "my-post" },
+                  }}
+                  passHref
+                >
+                  <Link>next/link with URL object</Link>
+                </NextLink>
+              </dt>
+              <dd style={{ width: "50%" }}>
+                <TextStyle variation="subdued">/blog/my-post</TextStyle>
+              </dd>
+            </dl>
+          </Stack>
+        </Card>
+        <Card>
+          <Stack vertical>
+            <Heading>next/link with Button test</Heading>
+            <dl style={{ display: "flex", flexWrap: "wrap", rowGap: "2px" }}>
+              {links.map(({ url, title }) => (
+                <Fragment key={url}>
+                  <dt style={{ width: "50%" }}>
+                    <NextLink href={url} passHref>
+                      <Button size="slim">{title}</Button>
+                    </NextLink>
+                  </dt>
+                  <dd style={{ width: "50%" }}>
+                    <TextStyle variation="subdued">{url}</TextStyle>
+                  </dd>
+                </Fragment>
+              ))}
+            </dl>
           </Stack>
         </Card>
       </FormLayout>
