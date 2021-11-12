@@ -8,6 +8,14 @@ The format is based on [these versioning and changelog guidelines](https://git.i
 
 ---
 
+## 2.2.1 - 2021-11-12
+
+### Bug fixes
+
+- Fixed warnings of `disallowEmptySelection` prop being set on a DOM element by updating
+  how we use the `useListBox` hook
+- Fixed warning of invalid prop type for `triggerRef` on `Popover`
+
 ## 2.2.0 - 2021-11-12
 
 ### Enhancements
