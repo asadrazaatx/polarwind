@@ -76,6 +76,6 @@ Popover.propTypes = {
   /** The ref of the trigger button */
   triggerRef: PropTypes.oneOfType([
     PropTypes.func,
-    PropTypes.shape({ current: PropTypes.element }),
+    PropTypes.shape({ current: PropTypes.any }),
   ]).isRequired,
 };

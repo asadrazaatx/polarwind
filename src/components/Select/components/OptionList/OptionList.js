@@ -1,5 +1,4 @@
 import { useListBox } from "@react-aria/listbox";
-import { mergeProps } from "@react-aria/utils";
 import classnames from "classnames/bind";
 import PropTypes from "prop-types";
 import { useRef } from "react";
@@ -19,24 +18,12 @@ export const OptionList = ({ state, ...otherProps }) => {
   // ourselves in the first argument. that argument will be more more controlling the
   // behavior of the listbox itself, like should the focus wrap, isLoading,
   // loadMore for lazy loading.
-  const { listBoxProps } = useListBox(
-    {
-      "aria-labelledby": otherProps["aria-labelledby"],
-      autoFocus: state.focusStrategy || true,
-      disallowEmptySelection: true,
-    },
-    state,
-    ref
-  );
+  const { listBoxProps } = useListBox(otherProps, state, ref);
 
   const className = cx({ OptionList: true });
 
   return (
-    <ul
-      {...mergeProps(listBoxProps, otherProps)}
-      className={className}
-      ref={ref}
-    >
+    <ul {...listBoxProps} className={className} ref={ref}>
       {[...state.collection].map((item) =>
         item.type === "section" ? (
           <OptionGroup group={item} key={item.key} state={state} />
