@@ -23,9 +23,10 @@ function isOwnUrl(url, ownHost) {
  * navigation events to the parent if run in an embedded way.
  */
 const UnstyledLink = forwardRef(function UnstyledLink(
-  { children, download, external, onClick, url, ...rest },
+  { children, download, external, href, onClick, url, ...rest },
   ref
 ) {
+  url = url ?? href;
   const origin = useContext(OriginContext);
   const embedded = useContext(EmbeddedContext);
   const ownHost = useContext(OwnHostContext);
@@ -79,10 +80,12 @@ UnstyledLink.propTypes = {
   download: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
   /** Makes the link open in a new tab */
   external: PropTypes.bool,
+  /** Alias for url */
+  href: PropTypes.string,
   /** Callback when a link is clicked */
   onClick: PropTypes.func,
   /** The url to link to */
-  url: PropTypes.string.isRequired,
+  url: PropTypes.string,
 };
 
 UnstyledLink.displayName = "UnstyledLink";

@@ -314,3 +314,17 @@ describe.each`
     });
   }
 );
+
+test("aliases href prop to url", () => {
+  render(<UnstyledLink href="/">Home</UnstyledLink>);
+  expect(screen.getByRole("link")).toHaveAttribute("href", "/");
+});
+
+test("url wins when both href and url are defined", () => {
+  render(
+    <UnstyledLink href="/loser" url="/winner">
+      Home
+    </UnstyledLink>
+  );
+  expect(screen.getByRole("link")).toHaveAttribute("href", "/winner");
+});
