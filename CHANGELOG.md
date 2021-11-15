@@ -8,6 +8,13 @@ The format is based on [these versioning and changelog guidelines](https://git.i
 
 ---
 
+## 2.3.0 - 20210-11-15
+
+### New components
+
+- Technically not new, but we now export `UnstyledLink` from the main package. Users can
+  now use it to wrap arbitrary components that need to be linked.
+
 ## 2.2.1 - 2021-11-12
 
 ### Bug fixes
