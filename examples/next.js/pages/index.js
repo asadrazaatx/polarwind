@@ -114,31 +114,29 @@ function App() {
             </dl>
           </Stack>
         </Card>
-        <Card>
-          <Stack distribution="fillEvenly" spacing="extraLoose">
-            <NextLink href="/about" passHref>
-              <UnstyledLink>
-                <Card>
-                  <Heading size="small">Linkable card</Heading>
-                </Card>
-              </UnstyledLink>
-            </NextLink>
-            <NextLink href="/about" passHref>
-              <UnstyledLink>
-                <Card>
-                  <Heading size="small">Linkable card</Heading>
-                </Card>
-              </UnstyledLink>
-            </NextLink>
-            <NextLink href="/about" passHref>
-              <UnstyledLink>
-                <Card>
-                  <Heading size="small">Linkable card</Heading>
-                </Card>
-              </UnstyledLink>
-            </NextLink>
-          </Stack>
-        </Card>
+        <Stack distribution="fillEvenly" spacing="extraLoose">
+          <NextLink href="/about" passHref>
+            <UnstyledLink>
+              <Card>
+                <Heading size="small">Linkable card</Heading>
+              </Card>
+            </UnstyledLink>
+          </NextLink>
+          <NextLink href="/about" passHref>
+            <UnstyledLink>
+              <Card>
+                <Heading size="small">Linkable card</Heading>
+              </Card>
+            </UnstyledLink>
+          </NextLink>
+          <NextLink href="/about" passHref>
+            <UnstyledLink>
+              <Card>
+                <Heading size="small">Linkable card</Heading>
+              </Card>
+            </UnstyledLink>
+          </NextLink>
+        </Stack>
       </FormLayout>
     </Page>
   );
