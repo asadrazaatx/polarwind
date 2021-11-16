@@ -41,7 +41,7 @@ const links = [
 
 function App() {
   return (
-    <Page>
+    <Page title="Polarwind test page">
       <FormLayout>
         <Select
           label="Visitor type"
