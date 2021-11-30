@@ -6,7 +6,7 @@ export default function About() {
     <Page title="About">
       <p>
         Go back{" "}
-        <NextLink href="/">
+        <NextLink href="/" passHref>
           <Link>home</Link>
         </NextLink>
       </p>
