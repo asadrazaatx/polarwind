@@ -30,7 +30,7 @@ export const Title = ({ action, breadcrumbs = [], children }) => {
 
   return (
     <div className={className}>
-      <Stack spacing="none">
+      <Stack alignment="center" spacing="loose" wrap={false}>
         {breadcrumbMarkup}
         <DisplayText element="h1" size="large">
           {children}

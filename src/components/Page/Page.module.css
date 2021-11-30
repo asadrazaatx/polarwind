@@ -43,13 +43,11 @@
   /** ensure page title is aligned to the middle of the title actions */
   @apply items-center;
 
-  .Polarwind-DisplayText {
-    /** when title action wraps under the title, give it some margin */
-    @apply mb-2;
-  }
+  /** when title action wraps under the title, give it some margin */
+  @apply gap-y-2;
 
   .breadcrumb {
-    @apply mr-2 flex items-center;
+    @apply flex items-center;
   }
 }
 
