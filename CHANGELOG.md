@@ -8,6 +8,12 @@ The format is based on [these versioning and changelog guidelines](https://git.i
 
 ---
 
+## 2.3.2 - 2021-12-02
+
+### Development workflow
+
+- Fix the GitHub Action responsible for publishing packages to npm and GitHub Private Registry
+
 ## 2.3.1 - 2021-11-30
 
 ### Bug fixes
