@@ -5,23 +5,30 @@ import {
   Props,
   Story,
 } from "@storybook/addon-docs/blocks";
-import { text } from "@storybook/addon-knobs";
 import { Caption } from "./Caption";
 
-<Meta component={Caption} title="Components / Titles and text / Caption" />
+<Meta
+  argTypes={{ children: { control: "text" } }}
+  component={Caption}
+  title="Components / Titles and text / Caption"
+/>
+
+export const Template = (args) => (
+  <ul>
+    <li>
+      <p>Larry Gadea</p>
+      <Caption {...args} />
+    </li>
+  </ul>
+);
 
 # Caption
 
 <Description of={Caption} />
 
 <Preview withToolbar>
-  <Story name="Example">
-    <ul>
-      <li>
-        <p>Larry Gadea</p>
-        <Caption>{text("caption", "Visited Apr 21, 2020")}</Caption>
-      </li>
-    </ul>
+  <Story args={{ children: "Visited Apr 21, 2020" }} name="Example">
+    {Template.bind({})}
   </Story>
 </Preview>
 

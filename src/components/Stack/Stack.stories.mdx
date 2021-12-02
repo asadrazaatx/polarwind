@@ -5,36 +5,33 @@ import {
   Props,
   Story,
 } from "@storybook/addon-docs/blocks";
-import { withSmartKnobs } from "storybook-addon-smart-knobs";
 import { Badge } from "../Badge";
 import { Card } from "../Card";
 import { Stack } from "./Stack";
 
-<Meta
-  component={Stack}
-  decorators={[withSmartKnobs({ ignoreProps: ["children"] })]}
-  title="Components / Structure / Stack"
-/>
+<Meta component={Stack} title="Components / Structure / Stack" />
+
+export const Template = (args) => (
+  <Stack {...args}>
+    <Card>One</Card>
+    <Card>Two</Card>
+    <Card>Three</Card>
+    <Card>Four</Card>
+    <Card>Five</Card>
+    <Card>Six</Card>
+    <Card>Seven</Card>
+    <Card>Eight</Card>
+    <Card>Nine</Card>
+    <Card>Ten</Card>
+  </Stack>
+);
 
 # Stack
 
 <Description of={Stack} />
 
 <Preview withToolbar>
-  <Story name="Example">
-    <Stack>
-      <Card>One</Card>
-      <Card>Two</Card>
-      <Card>Three</Card>
-      <Card>Four</Card>
-      <Card>Five</Card>
-      <Card>Six</Card>
-      <Card>Seven</Card>
-      <Card>Eight</Card>
-      <Card>Nine</Card>
-      <Card>Ten</Card>
-    </Stack>
-  </Story>
+  <Story name="Example">{Template.bind({})}</Story>
 </Preview>
 
 <Props of={Stack} />

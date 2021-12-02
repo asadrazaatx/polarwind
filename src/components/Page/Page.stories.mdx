@@ -5,8 +5,6 @@ import {
   Props,
   Story,
 } from "@storybook/addon-docs/blocks";
-import { text, withKnobs } from "@storybook/addon-knobs";
-import { withSmartKnobs } from "storybook-addon-smart-knobs";
 import { EmbeddedContext } from "../../utils/embedded";
 import { Button } from "../Button";
 import { ButtonGroup } from "../ButtonGroup";
@@ -20,22 +18,14 @@ import { Tabs } from "../Tabs";
 import { TextField } from "../TextField";
 import { Page } from "./Page";
 
-<Meta
-  component={Page}
-  decorators={[
-    withSmartKnobs({
-      ignoreProps: ["children", "titleAction", "tabs", "title", "icon"],
-    }),
-  ]}
-  title="Components / Structure / Page"
-/>
+<Meta component={Page} title="Components / Structure / Page" />
 
 # Page
 
 <Description of={Page} />
 
 <Preview withToolbar>
-  <Story decorators={[withKnobs]} name="Example">
+  <Story name="Example">
     <Page
       breadcrumbs={[{ content: "Invites", url: "/invites" }]}
       tabs={
@@ -47,7 +37,7 @@ import { Page } from "./Page";
           ]}
         />
       }
-      title={text("title", "New invite")}
+      title="New invite"
     >
       <FormLayout>
         <Select

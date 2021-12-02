@@ -5,12 +5,12 @@ import {
   Props,
   Story,
 } from "@storybook/addon-docs/blocks";
-import { text } from "@storybook/addon-knobs";
-import { withSmartKnobs } from "storybook-addon-smart-knobs";
 import { Stack } from "../Stack";
 import { Badge } from "./Badge";
 
 <Meta component={Badge} title="Components / Images and icons / Badge" />
+
+export const Template = (args) => <Badge {...args} />;
 
 # Badge
 
@@ -38,10 +38,11 @@ Use to give a non-critical status update on a piece of information or action.
 
 <Preview>
   <Story
-    decorators={[withSmartKnobs({ ignoreProps: ["children"] })]}
+    argTypes={{ children: { control: "text" } }}
+    args={{ children: "New" }}
     name="Default"
   >
-    <Badge>{text("label", "New")}</Badge>
+    {Template.bind({})}
   </Story>
 </Preview>
 

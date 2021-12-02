@@ -6,17 +6,10 @@ import {
   Story,
 } from "@storybook/addon-docs/blocks";
 import { useState } from "react";
-import { withSmartKnobs } from "storybook-addon-smart-knobs";
 import { FormLayout } from "../FormLayout";
 import { Select } from "./Select";
 
-<Meta
-  component={Select}
-  decorators={[
-    withSmartKnobs({ ignoreProps: ["children", "value", "helpText"] }),
-  ]}
-  title="Components / Forms / Select"
-/>
+<Meta component={Select} title="Components / Forms / Select" />
 
 # Select
 

@@ -5,15 +5,10 @@ import {
   Props,
   Story,
 } from "@storybook/addon-docs/blocks";
-import { withSmartKnobs } from "storybook-addon-smart-knobs";
 import { Page } from "../Page";
 import { AppProvider } from "./AppProvider";
 
-<Meta
-  component={AppProvider}
-  decorators={[withSmartKnobs({ ignoreProps: ["children"] })]}
-  title="Components / Structure / App provider"
-/>
+<Meta component={AppProvider} title="Components / Structure / App provider" />
 
 # App provider
 
