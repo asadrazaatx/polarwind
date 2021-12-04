@@ -1,0 +1,5 @@
+version: 2
+snapshot:
+  widths:
+    - 800
+  enable-javascript: true

@@ -16,10 +16,8 @@
     "stylelint": "stylelint src",
     "test": "jest",
     "generate": "plop",
-    "playroom": "playroom start",
-    "build-playroom": "playroom build",
-    "start": "run-p storybook playroom",
-    "snapshot": "STORYBOOK=1 yarn build-storybook && percy-storybook --widths=800"
+    "start": "yarn storybook",
+    "snapshot": "STORYBOOK=1 yarn build-storybook && percy storybook ./storybook-static"
   },
   "homepage": "https://www.chromatic.com/library?appId=5fc91dfd5650050021374090",
   "bugs": "https://github.com/envoy/polarwind/issues",
@@ -50,18 +48,18 @@
     "@babel/preset-env": "^7.9.5",
     "@babel/preset-react": "^7.9.4",
     "@envoy/tailwind": "^2.0.0",
-    "@percy/storybook": "^3.3.1",
+    "@percy/storybook": "^4.1.0",
     "@rollup/plugin-babel": "^5.0.0",
     "@rollup/plugin-image": "^2.0.5",
     "@rollup/plugin-node-resolve": "^13.0.4",
-    "@storybook/addon-a11y": "6.2.9",
-    "@storybook/addon-actions": "6.2.9",
-    "@storybook/addon-controls": "6.2.9",
-    "@storybook/addon-docs": "6.2.9",
-    "@storybook/addon-links": "6.2.9",
+    "@storybook/addon-a11y": "6.4.7",
+    "@storybook/addon-actions": "6.4.7",
+    "@storybook/addon-controls": "6.4.7",
+    "@storybook/addon-docs": "6.4.7",
+    "@storybook/addon-links": "6.4.7",
     "@storybook/addon-postcss": "^2.0.0",
-    "@storybook/addons": "6.2.9",
-    "@storybook/react": "6.2.9",
+    "@storybook/addons": "6.4.7",
+    "@storybook/react": "6.4.7",
     "@testing-library/jest-dom": "^5.7.0",
     "@testing-library/react": "^12.0.0",
     "autoprefixer": "^9",
@@ -83,13 +81,13 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-sort-destructure-keys": "^1.3.4",
     "eslint-plugin-sort-keys-fix": "^1.1.1",
+    "eslint-plugin-storybook": "^0.5.3",
     "hex-rgb": "^4.1.0",
     "identity-obj-proxy": "^3.0.0",
     "inquirer-search-list": "^1.2.6",
     "jest": "^27.0.6",
     "lodash": "^4.17.15",
     "npm-run-all": "^4.1.5",
-    "playroom": "^0.27.0",
     "plop": "^2.6.0",
     "postcss": "^7",
     "postcss-cli": "^7.1.0",
@@ -104,7 +102,6 @@
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-postcss": "^3.1.8",
     "snapshot-diff": "^0.9.0",
-    "storybook-addon-playroom": "^2.0.0",
     "stylelint": "^14.0.1",
     "stylelint-config-css-modules": "^2.2.0",
     "stylelint-config-prettier": "^9.0.3",
@@ -113,6 +110,7 @@
     "webpack-dev-server": "^4.0.0"
   },
   "dependencies": {
+    "@percy/cli": "^1.0.0-beta.71",
     "@react-aria/button": "^3.3.1",
     "@react-aria/listbox": "^3.2.4",
     "@react-aria/select": "^3.3.1",
@@ -121,7 +119,6 @@
     "react-autosize-textarea": "^7.0.0"
   },
   "resolutions": {
-    "postcss-focus-within": "^4.0.0",
-    "@storybook/client-api": "6.2.9"
+    "postcss-focus-within": "^4.0.0"
   }
 }

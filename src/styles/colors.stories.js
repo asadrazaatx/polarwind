@@ -38,9 +38,7 @@ function Color({ color, hex }) {
   );
 }
 
-const stories = storiesOf("Design / Colors", module).addParameters({
-  playroom: { disabled: true },
-});
+const stories = storiesOf("Design / Colors", module);
 
 Object.entries(colors)
   .filter(([key]) => !["transparent", "current"].includes(key))

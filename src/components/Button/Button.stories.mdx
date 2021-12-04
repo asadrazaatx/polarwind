@@ -4,7 +4,7 @@ import {
   Preview,
   Props,
   Story,
-} from "@storybook/addon-docs/blocks";
+} from "@storybook/addon-docs";
 import { FiTrash2 } from "react-icons/fi";
 import { ButtonGroup } from "../ButtonGroup";
 import { Stack } from "../Stack";
@@ -90,12 +90,7 @@ condition has not been fulfilled, for example, when a form has a validation erro
 supported on the slim and normal buttons.
 
 <Preview>
-  <Story
-    name="Icon"
-    parameters={{
-      playroom: { disabled: true },
-    }}
-  >
+  <Story name="Icon">
     <Stack alignment="center" distribution="equalSpacingAround">
       <Button icon={FiTrash2} size="slim">
         Delete

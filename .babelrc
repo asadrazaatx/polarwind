@@ -13,5 +13,8 @@
     "production": {
       "comments": false
     }
+  },
+  "assumptions": {
+    "iterableIsArray": false
   }
 }

@@ -11,7 +11,6 @@ module.exports = {
   addons: [
     "@storybook/addon-docs",
     "@storybook/addon-a11y",
-    "storybook-addon-playroom",
     "@storybook/addon-controls",
     {
       name: "@storybook/addon-postcss",

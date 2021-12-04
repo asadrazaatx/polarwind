@@ -16,6 +16,7 @@ module.exports = {
     "plugin:jest/recommended",
     "plugin:jest/style",
     "plugin:react/jsx-runtime",
+    "plugin:storybook/recommended",
   ],
   globals: {
     Atomics: "readonly",
@@ -60,7 +61,6 @@ module.exports = {
         allowArray: true,
       },
     ],
-
     "import/order": [
       "error",
       {
@@ -70,14 +70,12 @@ module.exports = {
         },
       },
     ],
-
     "jsx-a11y/label-has-for": [
       2,
       {
         allowChildren: true,
       },
     ],
-
     "object-shorthand": ["error", "always"],
     "react/jsx-sort-props": [
       "error",
@@ -85,12 +83,18 @@ module.exports = {
         callbacksLast: true,
       },
     ],
-    "sort-destructure-keys/sort-destructure-keys": [2, { caseSensitive: true }],
+    "sort-destructure-keys/sort-destructure-keys": [
+      2,
+      {
+        caseSensitive: true,
+      },
+    ],
     "sort-imports": [
       "error",
       {
         ignoreCase: true,
-        ignoreDeclarationSort: true, // to avoid clashing with import/order
+        ignoreDeclarationSort: true,
+        // to avoid clashing with import/order
         memberSyntaxSortOrder: ["all", "single", "multiple", "none"],
       },
     ],
