@@ -5,6 +5,7 @@ import {
   Props,
   Story,
 } from "@storybook/addon-docs";
+import { userEvent, within } from "@storybook/testing-library";
 import { useState } from "react";
 import { FormLayout } from "../FormLayout";
 import { Select } from "./Select";
@@ -257,9 +258,15 @@ state of the select. This will be removed when Storybook supports interacting wi
 component programmatically in a story.
 
 <Preview>
-  <Story name="Open state">
+  <Story
+    name="Open state"
+    play={async ({ canvasElement }) => {
+      const canvas = within(canvasElement);
+      await userEvent.tab();
+      await userEvent.type(canvas.getByRole("button"), "{arrowdown}");
+    }}
+  >
     <Select
-      __FOR_TESTING_ONLY_isOpen={true}
       label="Month"
       options={[
         { label: "January", value: "1" },

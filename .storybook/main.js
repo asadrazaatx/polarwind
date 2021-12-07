@@ -12,6 +12,7 @@ module.exports = {
     "@storybook/addon-docs",
     "@storybook/addon-a11y",
     "@storybook/addon-controls",
+    "@storybook/addon-interactions",
     {
       name: "@storybook/addon-postcss",
       options: {
@@ -44,5 +45,8 @@ module.exports = {
     ];
 
     return config;
+  },
+  features: {
+    interactionsDebugger: true,
   },
 };
