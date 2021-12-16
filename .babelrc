@@ -2,7 +2,8 @@
   "ignore": ["node_modules/**"],
   "presets": [
     "@babel/env",
-    ["@babel/preset-react", { "runtime": "automatic" }]
+    ["@babel/preset-react", { "runtime": "automatic" }],
+    "@babel/preset-typescript"
   ],
   "plugins": [
     "add-react-displayname",

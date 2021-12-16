@@ -71,6 +71,6 @@ module.exports = {
     divideOpacity: false,
   },
   purge: {
-    content: ["./src/**/*.js"],
+    content: ["./src/**/*.js", "./src/**/*.ts", "./src/**/*.tsx"],
   },
 };

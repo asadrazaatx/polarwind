@@ -101,6 +101,11 @@ module.exports = {
     "sort-keys-fix/sort-keys-fix": "error",
   },
   settings: {
+    "import/resolver": {
+      node: {
+        extensions: [".js", ".jsx", ".ts", ".tsx"],
+      },
+    },
     react: {
       version: "detect",
     },

@@ -15,16 +15,18 @@ const externalPackages = [
   "object-assign",
 ];
 
+const extensions = [".js", ".jsx", ".ts", ".tsx"];
+
 module.exports = [
   {
     external: (id) =>
       externalPackages.includes(id) ||
       id.includes("react-aria") ||
       id.includes("react-stately"),
-    input: "src/index.js",
+    input: "src/index.ts",
     plugins: [
-      nodeResolve(),
-      babel({ babelHelpers: "bundled" }),
+      nodeResolve({ extensions }),
+      babel({ babelHelpers: "bundled", extensions }),
       commonjs({
         namedExports: {
           "react/jsx-runtime": ["jsx", "jsxs", "Fragment"],
