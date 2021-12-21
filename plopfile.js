@@ -32,13 +32,13 @@ module.exports = function (plop) {
     actions: [
       {
         type: "add",
-        path: "src/components/{{properCase name}}/{{properCase name}}.js",
-        templateFile: "plop-templates/component/Component.js.hbs",
+        path: "src/components/{{properCase name}}/{{properCase name}}.tsx",
+        templateFile: "plop-templates/component/Component.tsx.hbs",
       },
       {
         type: "add",
-        path: "src/components/{{properCase name}}/index.js",
-        templateFile: "plop-templates/component/index.js.hbs",
+        path: "src/components/{{properCase name}}/index.ts",
+        templateFile: "plop-templates/component/index.ts.hbs",
       },
       {
         type: "add",
@@ -52,7 +52,7 @@ module.exports = function (plop) {
       },
       {
         type: "append",
-        path: "src/components/index.js",
+        path: "src/components/index.ts",
         template:
           'export { {{properCase name }} } from "./{{properCase name}}";',
       },

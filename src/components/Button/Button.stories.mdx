@@ -8,6 +8,7 @@ import {
 import { FiTrash2 } from "react-icons/fi";
 import { ButtonGroup } from "../ButtonGroup";
 import { Stack } from "../Stack";
+import { ThemeProvider } from "../ThemeProvider";
 import { Button } from "./Button";
 
 <Meta component={Button} title="Components / Actions / Button" />
@@ -58,6 +59,28 @@ style can be used for tertiary actions.
         </ButtonGroup>
         <Button plain>Cancel</Button>
       </Stack>
+    </div>
+  </Story>
+</Preview>
+
+### Themes
+
+The default Button primary color can be customized by wrapping it in a `ThemeProvider`. Do
+note that the theme will only apply to the default and `brandOutline` variants.
+
+<Preview>
+  <Story name="Themes">
+    <div style={{ backgroundColor: "#f6f6f9", padding: "1rem" }}>
+      <ThemeProvider theme={{ colors: { primary: "#4800ba" } }}>
+        <Stack distribution="equalSpacingAround">
+          <ButtonGroup>
+            <Button>Invite</Button>
+            <Button brandOutline>Invite</Button>
+            <Button outline>Invite and add another</Button>
+          </ButtonGroup>
+          <Button plain>Cancel</Button>
+        </Stack>
+      </ThemeProvider>
     </div>
   </Story>
 </Preview>

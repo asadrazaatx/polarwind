@@ -11,6 +11,10 @@
     @apply font-sans;
   }
 
+  :root {
+    --pw-colors-primary: theme("colors.red.50");
+  }
+
   @font-face {
     font-family: SofiaPro;
     src: url("https://envoy-fonts.s3.amazonaws.com/sofia-pro/3AF984_A_0.eot");

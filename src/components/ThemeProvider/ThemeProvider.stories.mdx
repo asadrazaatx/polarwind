@@ -1,0 +1,119 @@
+import {
+  Description,
+  Meta,
+  Preview,
+  Props,
+  Story,
+} from "@storybook/addon-docs";
+import { AppProvider } from "../AppProvider";
+import { Button } from "../Button";
+import { ButtonGroup } from "../ButtonGroup";
+import { ThemeProvider, useTheme } from "./ThemeProvider";
+
+<Meta
+  argTypes={{
+    children: { table: { disable: true } },
+    primary: {
+      control: "color",
+      name: "colors.primary",
+    },
+    theme: { table: { disable: true } },
+  }}
+  component={ThemeProvider}
+  title="Components / Structure / Theme provider"
+/>
+
+# Theme provider
+
+<Description of={ThemeProvider} />
+
+<Preview withToolbar>
+  <Story argTypes={{ primary: { table: { disable: true } } }} name="Example">
+    <AppProvider>
+      <Button>Press me</Button>
+    </AppProvider>
+  </Story>
+</Preview>
+
+<Props of={ThemeProvider} />
+
+## Usage
+
+### Default
+
+AppProvider renders a ThemeProvider component with the default theme.
+
+### With AppProvider theme prop
+
+A custom theme can be passed to the theme prop on the app provider to override one or more
+of the default theme colors at a global level.
+
+export const Template = ({ primary }) => (
+  <AppProvider theme={{ colors: { primary } }}>
+    <Button>Press me</Button>
+  </AppProvider>
+);
+
+<Preview withToolbar>
+  <Story args={{ primary: "#4800ba" }} name="AppProvider theme prop">
+    {Template.bind({})}
+  </Story>
+</Preview>
+
+### With ThemeProvider
+
+A theme provider can be nested within the app provider in order to override colors at a
+local level.
+
+export const TemplateWithThemeProvider = ({
+  appProviderPrimaryColor,
+  primary,
+}) => (
+  <AppProvider theme={{ colors: { primary: appProviderPrimaryColor } }}>
+    <ButtonGroup>
+      <Button>Press me</Button>
+      <ThemeProvider theme={{ colors: { primary } }}>
+        <Button>Nested button</Button>
+      </ThemeProvider>
+    </ButtonGroup>
+  </AppProvider>
+);
+
+<Preview withToolbar>
+  <Story
+    argTypes={{
+      appProviderPrimaryColor: {
+        control: "color",
+        name: "AppProvider colors.primary",
+      },
+    }}
+    args={{ primary: "#4800ba" }}
+    name="Custom theme"
+  >
+    {TemplateWithThemeProvider.bind({})}
+  </Story>
+</Preview>
+
+### With useTheme
+
+You can use the `useTheme` hook to access the theme at any point in your app. The theme
+will reflect the theme of the nearest theme provider.
+
+export const TemplateWithHook = ({ primary }) => {
+  return (
+    <AppProvider theme={{ colors: { primary } }}>
+      <WithUseTheme />
+    </AppProvider>
+  );
+};
+
+export const WithUseTheme = () => {
+  const theme = useTheme();
+  return <p style={{ color: theme.colors.primary }}>Styled with useTheme</p>;
+};
+
+<Preview withToolbar>
+  <Story args={{ primary: "#4800ba" }} name="useTheme hook">
+    {TemplateWithHook.bind({})}
+  </Story>
+</Preview>

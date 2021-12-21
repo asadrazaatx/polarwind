@@ -3,16 +3,12 @@
   @apply font-medium text-white text-base leading-base-normal;
   @apply px-4 py-2.75;
   @apply self-center;
-  @apply bg-red-50 hover:bg-red-60;
-  @apply border border-red-50;
+  @apply bg-primary hover:brightness-105 active:brightness-100;
+  @apply border border-primary;
   @apply inline-block;
   @apply select-none;
   @apply focus:outline-none;
-  @apply focus:shadow-outline-red-50;
-
-  &.disabled {
-    @apply hover:bg-red-50;
-  }
+  @apply ring-primary ring-offset-1 focus-visible:ring-2;
 
   span {
     @apply align-base;
@@ -48,33 +44,22 @@
 
 .disabled {
   @apply opacity-65;
-  @apply cursor-not-allowed;
+  @apply pointer-events-none;
 }
 
 .plain {
   @apply border-transparent text-carbon-60;
   @apply bg-white hover:bg-carbon-10;
   @apply focus:shadow-outline;
-
-  &.disabled {
-    @apply hover:bg-white;
-  }
 }
 
 .outline {
   composes: plain;
   @apply border-carbon-10 hover:border-carbon-20 focus:border-carbon-10;
-
-  &.disabled {
-    @apply hover:border-carbon-10;
-  }
 }
 
 .brandOutline {
-  @apply text-red-50 hover:text-white active:text-red-50;
-  @apply bg-white focus:bg-transparent;
-
-  &.disabled {
-    @apply hover:bg-white;
-  }
+  @apply text-primary hover:text-white active:text-primary;
+  @apply bg-white hover:bg-primary active:bg-white;
+  @apply hover:brightness-100 active:brightness-95;
 }

@@ -31,6 +31,15 @@ module.exports = {
       borderWidth: {
         6: "6px",
       },
+      colors: {
+        /**
+         * Themeable design tokens
+         *
+         * If you add a new token here, be sure to set it's default value in common.css
+         * `:root` selector
+         */
+        primary: "var(--pw-colors-primary)",
+      },
       flex: {
         fill: "1 0",
       },

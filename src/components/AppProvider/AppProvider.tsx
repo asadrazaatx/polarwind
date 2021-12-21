@@ -5,6 +5,7 @@ import { EmbeddedContext } from "../../utils/embedded";
 import { OriginContext } from "../../utils/origin";
 import { OwnHostContext } from "../../utils/own-host";
 import { ParentProvider } from "../ParentProvider";
+import { Theme, ThemeProvider } from "../ThemeProvider";
 
 /**
  * App provider is a required component that enables sharing global settings throughout
@@ -15,6 +16,7 @@ export const AppProvider = ({
   embedded = true,
   origin = "https://dashboard.envoy.com",
   ownHost = window?.location.origin,
+  theme,
 }: {
   /**
    * Inner content of the application
@@ -45,6 +47,11 @@ export const AppProvider = ({
    * set `target="_blank"` on the links.
    */
   ownHost: string;
+
+  /**
+   * Custom colors provided to select components
+   */
+  theme?: Theme;
 }) => {
   return (
     <EmbeddedContext.Provider value={embedded}>
@@ -52,7 +59,9 @@ export const AppProvider = ({
         <OwnHostContext.Provider value={ownHost}>
           <ParentProvider>
             <SSRProvider>
-              <OverlayProvider>{children}</OverlayProvider>
+              <OverlayProvider>
+                <ThemeProvider theme={theme}>{children}</ThemeProvider>
+              </OverlayProvider>
             </SSRProvider>
           </ParentProvider>
         </OwnHostContext.Provider>

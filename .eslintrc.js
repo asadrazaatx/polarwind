@@ -36,6 +36,7 @@ module.exports = {
       files: ["*.mdx"],
       rules: {
         "mdx/no-unescaped-entities": "off",
+        "react/prop-types": "off",
       },
     },
     {

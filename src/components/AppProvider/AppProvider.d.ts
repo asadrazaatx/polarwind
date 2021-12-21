@@ -1,9 +1,10 @@
 import React from "react";
+import { Theme } from "../ThemeProvider";
 /**
  * App provider is a required component that enables sharing global settings throughout
  * the hierarchy of your application.
  */
-export declare const AppProvider: ({ children, embedded, origin, ownHost, }: {
+export declare const AppProvider: ({ children, embedded, origin, ownHost, theme, }: {
     /**
      * Inner content of the application
      */
@@ -30,4 +31,8 @@ export declare const AppProvider: ({ children, embedded, origin, ownHost, }: {
      * set `target="_blank"` on the links.
      */
     ownHost: string;
+    /**
+     * Custom colors provided to select components
+     */
+    theme?: Theme;
 }) => JSX.Element;

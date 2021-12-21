@@ -5,6 +5,7 @@ import {
   Props,
   Story,
 } from "@storybook/addon-docs";
+import { Button } from "../Button";
 import { Page } from "../Page";
 import { AppProvider } from "./AppProvider";
 
@@ -29,3 +30,16 @@ import { AppProvider } from "./AppProvider";
 ### Default
 
 AppProvider works by default without any additional options passed to it.
+
+### With theme
+
+With a `theme`, the app provider component will set theming for the App. For theming
+configuration, see the `ThemeProvider` documentation.
+
+<Preview withToolbar>
+  <Story name="With theme">
+    <AppProvider theme={{ colors: { primary: "#0048ba" } }}>
+      <Button>Customized button</Button>
+    </AppProvider>
+  </Story>
+</Preview>

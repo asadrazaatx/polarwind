@@ -41,7 +41,7 @@ function Color({ color, hex }) {
 const stories = storiesOf("Design / Colors", module);
 
 Object.entries(colors)
-  .filter(([key]) => !["transparent", "current"].includes(key))
+  .filter(([key]) => !["transparent", "current", "primary"].includes(key))
   .forEach(([key, value]) => {
     if (typeof value === "string") {
       stories.add(key, () => <Color color={key} hex={value} />);
