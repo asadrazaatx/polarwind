@@ -8,6 +8,17 @@ The format is based on [these versioning and changelog guidelines](https://git.i
 
 ---
 
+## 2.4.0 - 2021-12-23
+
+### New components
+
+- Added `ThemeProvider` to allow customizing the theme. Currently this only applies to Buttons.
+
+### Enhancements
+
+- Added initial theming support. See `AppProvider`, `ThemeProvider` and `Button`
+  documentation.
+
 ## 2.3.2 - 2021-12-02
 
 ### Development workflow
