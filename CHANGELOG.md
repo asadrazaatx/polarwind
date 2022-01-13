@@ -8,6 +8,12 @@ The format is based on [these versioning and changelog guidelines](https://git.i
 
 ---
 
+## 2.4.1 - 2021-12-23
+
+### Bug fixes
+
+- Fixed Checkbox component to be a controlled component. The `checked` prop now is required.
+
 ## 2.4.0 - 2021-12-23
 
 ### New components

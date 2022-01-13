@@ -8,8 +8,6 @@
 
 ### Bug fixes
 
-- Fixed Checkbox component to be a controlled component. The `checked` prop now is required.
-
 ### Documentation
 
 ### Development workflow
