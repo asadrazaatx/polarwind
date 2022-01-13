@@ -18,8 +18,17 @@ export const Checkbox = ({
   onChange,
   onFocus,
 }) => {
-  const handleOnChange = (event) => {
-    onChange && onChange(event.currentTarget.checked);
+  const isIndeterminate = checked === "indeterminate";
+  const isChecked = !isIndeterminate && Boolean(checked) && checked !== "false";
+  const ref = useRef();
+  const className = cx("form-checkbox", "Checkbox");
+  const ariaAttributes = {
+    "aria-checked": isIndeterminate ? "mixed" : isChecked,
+    "aria-disabled": disabled,
+  };
+
+  const handleOnChange = () => {
+    onChange && onChange(isIndeterminate ? false : !isChecked);
   };
 
   const handleOnBlur = () => {
@@ -30,27 +39,30 @@ export const Checkbox = ({
     onFocus && onFocus();
   };
 
-  const isIndeterminate = checked === "indeterminate";
-  const isChecked = !isIndeterminate && Boolean(checked) && checked !== "false";
+  const handleClick = (event) => {
+    if (ref.current) {
+      ref.current.indeterminate = event.currentTarget.value === "indeterminate";
+    }
+  };
 
-  const ref = useRef();
   useEffect(() => {
-    ref.current.checked = isChecked;
     ref.current.indeterminate = isIndeterminate;
-  }, [isIndeterminate, isChecked]);
-
-  const className = cx("form-checkbox", "Checkbox");
+  }, [isIndeterminate]);
 
   return (
     <Label className={styles.Label} label={label}>
       <input
+        checked={isChecked}
         className={className}
         disabled={disabled}
         ref={ref}
         type="checkbox"
+        value={checked}
         onBlur={handleOnBlur}
         onChange={handleOnChange}
+        onClick={handleClick}
         onFocus={handleOnFocus}
+        {...ariaAttributes}
       />
     </Label>
   );
@@ -58,7 +70,7 @@ export const Checkbox = ({
 
 Checkbox.propTypes = {
   /** Checkbox is selected. `indeterminate` shows a horizontal line in the checkbox */
-  checked: PropTypes.oneOf([true, false, "indeterminate"]),
+  checked: PropTypes.oneOf([true, false, "indeterminate"]).isRequired,
   /** Disable input */
   disabled: PropTypes.bool,
   /** Label for the checkbox */
