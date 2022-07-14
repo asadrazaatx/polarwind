@@ -21,12 +21,12 @@ export const AppProvider = ({
   /**
    * Inner content of the application
    */
-  children?: React.ReactNode;
+  children: React.ReactNode;
 
   /**
    * Set whether running in embedded or standalone mode.
    */
-  embedded: boolean;
+  embedded?: boolean;
 
   /**
    * Envoy Dashboard origin.
@@ -35,7 +35,7 @@ export const AppProvider = ({
    * determining if a link belongs to the host app, so that the appropriate message can be
    * sent up to perform the navigation.
    */
-  origin: string;
+  origin?: string;
 
   /**
    * Hostname of where the embedded app is hosted.
@@ -46,12 +46,12 @@ export const AppProvider = ({
    * Otherwise, link handling will not be able to determine if it's an internal link and
    * set `target="_blank"` on the links.
    */
-  ownHost: string;
+  ownHost?: string;
 
   /**
    * Custom colors provided to select components
    */
-  theme?: Theme;
+  theme: Theme;
 }) => {
   return (
     <EmbeddedContext.Provider value={embedded}>

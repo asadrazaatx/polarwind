@@ -8,11 +8,11 @@ export declare const AppProvider: ({ children, embedded, origin, ownHost, theme,
     /**
      * Inner content of the application
      */
-    children?: React.ReactNode;
+    children: React.ReactNode;
     /**
      * Set whether running in embedded or standalone mode.
      */
-    embedded: boolean;
+    embedded?: boolean;
     /**
      * Envoy Dashboard origin.
      *
@@ -20,7 +20,7 @@ export declare const AppProvider: ({ children, embedded, origin, ownHost, theme,
      * determining if a link belongs to the host app, so that the appropriate message can be
      * sent up to perform the navigation.
      */
-    origin: string;
+    origin?: string;
     /**
      * Hostname of where the embedded app is hosted.
      *
@@ -30,9 +30,9 @@ export declare const AppProvider: ({ children, embedded, origin, ownHost, theme,
      * Otherwise, link handling will not be able to determine if it's an internal link and
      * set `target="_blank"` on the links.
      */
-    ownHost: string;
+    ownHost?: string;
     /**
      * Custom colors provided to select components
      */
-    theme?: Theme;
+    theme: Theme;
 }) => JSX.Element;
